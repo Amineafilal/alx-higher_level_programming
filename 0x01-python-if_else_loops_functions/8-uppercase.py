@@ -8,4 +8,4 @@ def uppercase(str):
             stock += chr(ord(u))
         else:
             stock += chr(ord(u))
-    print(stock)
+    print("{}".format(stock))
