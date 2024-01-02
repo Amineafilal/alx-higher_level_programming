@@ -9,7 +9,7 @@ if number < 0:
     numberlast = -numberlast
 print("Last digit of {} is {} and is ".format(number, numberlast), end="")
 if numberlast > 5:
-    print("greater than 5 and not 0")
+    print("greater than 5")
 elif numberlast == 0:
     print("0")
 else:
