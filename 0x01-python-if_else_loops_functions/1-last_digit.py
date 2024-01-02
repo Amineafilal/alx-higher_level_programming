@@ -12,5 +12,5 @@ if numberlast > 5:
     print("greater than 5 and not 0")
 elif numberlast == 0:
     print("0")
-els:
+else:
     print("less than 6 and not 0")
