@@ -4,5 +4,5 @@ if __name__ == "__main__":
     import hidden_4 as hid
 
     for files in dir(hid):
-        if files != "__":
+        if files[:2] != "__":
             print(files)
