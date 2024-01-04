@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import sy
+    import sys
 
     a = int(sys.argv[1])
     cm = sys.argv[2]
