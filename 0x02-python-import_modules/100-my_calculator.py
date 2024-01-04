@@ -25,4 +25,4 @@ if __name__ == "__main__":
         resultmath = math.mul(a, b)
     elif cm == "/":
         resultmath = math.div(a, b)
-    print("{} {} {} = {} ".format(a, cm, b, resultmath))
+    print("{} {} {} = {}".format(a, cm, b, resultmath))
