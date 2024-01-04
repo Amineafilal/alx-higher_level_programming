@@ -10,4 +10,4 @@ def magic_calculation(a, b):
             c = magical.add(c, i)
         return (c)
     else:
-        return (sub(a, b))
+        return (magical.sub(a, b))
