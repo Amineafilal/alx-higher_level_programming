@@ -6,5 +6,4 @@ from  add_0 import adds
 a = 1
 b = 2
 
-calculsum = adds.add(a, b)
-print("{} + {} = {}".format(a, b, calculsum))
+print("{} + {} = {}".format(a, b, add(a, b)))
