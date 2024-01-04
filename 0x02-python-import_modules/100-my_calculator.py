@@ -12,7 +12,7 @@ if __name__ == "__main__":
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
     import calculator_1 as math
-    
+
     a = int(sys.argv[1])
     b = int(sys.argv[3])
 
