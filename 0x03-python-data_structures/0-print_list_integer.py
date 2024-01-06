@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def print_list_integer(my_list=[]):
     
-    listmy = my_list[0:6]
-    for listm in listmy:
-        print(listm)
+    listmy = len(my_list)
+    for listm in range(listmy):
+        print('{}'.format(listm))
