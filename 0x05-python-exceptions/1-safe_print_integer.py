@@ -5,7 +5,4 @@ def safe_print_integer(value):
         print(value_convert)
         return True
     except (ValueError, TypeError):
-        pass
-    else:
-        print()
         return False
