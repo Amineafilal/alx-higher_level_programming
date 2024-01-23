@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+
+""" This module contains a class Square that defines a square."""
+
+
 class Square:
+    """Represents a square with a size, position"""
+
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
