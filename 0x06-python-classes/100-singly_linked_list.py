@@ -6,7 +6,12 @@ class Node:
     """Represents a Node in a singly linked list"""
 
     def __init__(self, data, next_node=None):
-        """Initialize a Node with data and an optional next_node"""
+        """Initialize a Node with data
+
+        Args:
+            data (int): The data of new Node
+            new_node  (Node): The new Node
+        """
         self.data = data
         self.next_node = next_node
 
@@ -17,14 +22,13 @@ class Node:
 
     @data.setter
     def data(self, value):
-        """Setter for data attribute with type validation"""
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self._data = value
 
     @property
     def next_node(self):
-        """Getter for next_node attribute"""
+        """Getter/setter for next_node attribute"""
         return self._next_node
 
     @next_node.setter
@@ -43,21 +47,26 @@ class SinglyLinkedList:
         self.head = None
 
     def sorted_insert(self, value):
-        """Insert a new Node into the correct sorted position"""
+        """
+        Insert a new Node into the correct sorted position
+
+        The node is inserted into
+
+        Args:
+            value (Node): The new Node to insert
+        """
         new_node = Node(value)
 
-        # Insert at the beginning if the list is empty
         if self.head is None or value < self.head.data:
             new_node.next_node = self.head
             self.head = new_node
             return
 
         current = self.head
-        # Find the correct position to insert the new node
+
         while current.next_node is not None and current.next_node.data < value:
             current = current.next_node
 
-        # Insert the new node into the sorted position
         new_node.next_node = current.next_node
         current.next_node = new_node
 
