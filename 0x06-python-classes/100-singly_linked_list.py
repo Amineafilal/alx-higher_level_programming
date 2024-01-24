@@ -43,7 +43,7 @@ class SinglyLinkedList:
 
     def __init__(self):
         """Initialize an empty Singly Linked List with a head"""
-        self.__head = None
+        self.head = None
 
     def sorted_insert(self, value):
         """
@@ -59,21 +59,18 @@ class SinglyLinkedList:
         if self.head is None or value < self.head.data:
             new_node.next_node = self.head
             self.head = new_node
-            return
-
-        current = self.head
-
-        while current.next_node is not None and current.next_node.data < value:
-            current = current.next_node
-
-        new_node.next_node = current.next_node
-        current.next_node = new_node
+        else:
+            current = self.head
+            while current.next_node is not None and current.next_node.data < value:
+                current = current.next_node
+            new_node.next_node = current.next_node
+            current.next_node = new_node
 
     def __str__(self):
         """Return a string representation of the linked list"""
-        result = ""
+        result = []
         current = self.head
         while current:
-            result += str(current.data) + "\n"
+            result.append(str(current.data))
             current = current.next_node
-        return result
+        return ('\n'.join(result))
