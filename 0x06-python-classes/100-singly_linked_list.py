@@ -61,10 +61,13 @@ class SinglyLinkedList:
             self.head = n_node
         else:
             current = self.head
-            while current.n_node is not None and current.n_node.data < value:
+            while (
+                current.next_node is not None and
+                current.next_node.data < value
+            ):
                 current = current.next_node
-            new_node.next_node = current.next_node
-            current.next_node = new_node
+            n_node.next_node = current.next_node
+            current.next_node = n_node
 
     def __str__(self):
         """Return a string representation of the linked list"""
