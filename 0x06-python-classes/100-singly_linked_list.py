@@ -54,14 +54,14 @@ class SinglyLinkedList:
         Args:
             value (Node): The new Node to insert
         """
-        new_node = Node(value)
+        n_node = Node(value)
 
         if self.head is None or value < self.head.data:
-            new_node.next_node = self.head
-            self.head = new_node
+            n_node.next_node = self.head
+            self.head = n_node
         else:
             current = self.head
-            while current.next_node is not None and current.next_node.data < value:
+            while current.n_node is not None and current.n_node.data < value:
                 current = current.next_node
             new_node.next_node = current.next_node
             current.next_node = new_node
