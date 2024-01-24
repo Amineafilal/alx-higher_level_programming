@@ -43,7 +43,7 @@ class SinglyLinkedList:
 
     def __init__(self):
         """Initialize an empty Singly Linked List with a head"""
-        self.head = None
+        self.__head = None
 
     def sorted_insert(self, value):
         """
