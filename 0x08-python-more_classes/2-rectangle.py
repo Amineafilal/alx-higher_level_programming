@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+"""This module represent area an perimetre of class"""
+
+
 class Rectangle:
+    """This rectangle classe"""
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
