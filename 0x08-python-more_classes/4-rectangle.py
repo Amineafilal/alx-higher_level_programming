@@ -1,5 +1,12 @@
 #!/usr/bin/python3
+
+"""This module present rectangle"""
+
+
 class Rectangle:
+
+    """ This class that definesa rectengle"""
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -44,5 +51,6 @@ class Rectangle:
         for _ in range(self.__height):
             rect_str += '#' * self.width + '\n'
         return rect_str.rstrip('\n')
+
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
