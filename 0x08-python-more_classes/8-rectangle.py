@@ -1,6 +1,10 @@
 #!/usr/bin/python3
+"""This module present rectangle"""
+
 
 class Rectangle:
+    """ This class that definesa rectengle"""
+
     number_of_instances = 0
     print_symbol = "#"
 
@@ -44,7 +48,7 @@ class Rectangle:
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join([str(self.print_symbol) * self.__width] * self.__height)
+        return "\n".join([str(self.print_symbol) * self.width] * self.height)
 
     def __repr__(self):
         return f"Rectangle({self.width}, {self.height})"
@@ -52,7 +56,7 @@ class Rectangle:
     def __del__(self):
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-    
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):

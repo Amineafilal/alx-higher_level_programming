@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""This module present rectangle"""
+
+
 class Rectangle:
+    """ This class that definesa rectengle"""
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
@@ -22,7 +26,7 @@ class Rectangle:
     @property
     def height(self):
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -47,8 +51,10 @@ class Rectangle:
         for _ in range(self.__height):
             rect_str += '#' * self.width + '\n'
         return rect_str.rstrip('\n')
+
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
+
     def __del__(self):
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
