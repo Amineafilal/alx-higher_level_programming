@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module print square characters"""
 
+
 def print_square(size):
     """
     Print a square of '#' characters.
@@ -9,7 +10,8 @@ def print_square(size):
         size (int): The size length of the square.
 
     Raises:
-        TypeError: If size is not an integer or if size is a float and less than 0.
+        TypeError: If size is not an integer or
+                    if size is a float and less than 0.
         ValueError: If size is less than 0.
 
     Returns:
