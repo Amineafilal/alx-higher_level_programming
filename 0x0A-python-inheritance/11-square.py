@@ -12,10 +12,6 @@ class Square(Rectangle):
 
         Args:
         size (int): The size of the square.
-
-        Raises:
-        TypeError: If size is not an integer.
-        ValueError: If size is less than or equal to 0.
         """
         self.integer_validator("size", size)
         super().__init__(size, size)
