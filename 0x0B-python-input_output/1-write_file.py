@@ -4,5 +4,6 @@
 
 def write_file(filename="", text=""):
     """ This function write a lenght of characters """
-    with open(filename, "w", encoding="utf-8") as f:
-        return f.write(text)
+    with open(filename, "r", encoding="utf-8") as f:
+        write_file = f.read()
+    return len(text)
