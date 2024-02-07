@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-"""This modulle represeent inserts a line of text to a file"""
+"""This modulle represent inserts a line of text to a file"""
+
 
 def append_after(filename="", search_string="", new_string=""):
-    """Inserts a line of text to a file after each line containing a specific string."""
-    with open(filename, 'r') as file:
-        lines = file.readlines()
+    """Inserts a line of text to a file after each line a specific string."""
+    with open(filename, 'r') as f:
+        lines = f.readlines()
 
-    with open(filename, 'w') as file:
+    with open(filename, 'w') as f:
         for line in lines:
-            file.write(line)
+            f.write(line)
             if search_string in line:
-                file.write(new_string)
+                f.write(new_string)
