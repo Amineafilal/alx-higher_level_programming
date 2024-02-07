@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This modulle defines the a student"""
 
+
 class Student:
     """Defines a student with first name, last name, and age."""
 
@@ -14,14 +15,13 @@ class Student:
         """Retrieve a dictionary representation of a Student instance."""
         if attrs is None:
             return {
-                    'first_name': self.first_name,
-                    'last_name': self.last_name,
-                    'age': self.age
-                    }
+                'first_name': self.first_name,
+                'last_name': self.last_name,
+                'age': self.age
+            }
             else:
                 json_data = {}
                 for attr in attrs:
                     if hasattr(self, attr):
                         json_data[attr] = getattr(self, attr)
-                        return json_data
-
+                return json_data
