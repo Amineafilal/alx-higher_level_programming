@@ -14,7 +14,9 @@ def pascal_triangle(n):
 
         for j in range(1, i):
             row.append(prev_row[j - 1] + prev_row[j])
-            row.append(1)
-            triangle.append(row)
+
+        row.append(1)
+        triangle.append(row)
 
     return triangle
+
