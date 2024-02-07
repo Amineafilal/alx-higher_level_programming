@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ This module hat reads stdin line by line and computes metrics """
-import sys
+if __name__ == "__main__":
+    import sys
 
 def print_metrics(total_size, status_counts):
     """Prints the computed metrics."""
