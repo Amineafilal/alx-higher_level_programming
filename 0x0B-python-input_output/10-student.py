@@ -19,9 +19,9 @@ class Student:
                 'last_name': self.last_name,
                 'age': self.age
             }
-            else:
-                json_data = {}
-                for attr in attrs:
-                    if hasattr(self, attr):
-                        json_data[attr] = getattr(self, attr)
-                return json_data
+        else:
+            json_data = {}
+            for attr in attrs:
+                if hasattr(self, attr):
+                    json_data[attr] = getattr(self, attr)
+            return json_data
