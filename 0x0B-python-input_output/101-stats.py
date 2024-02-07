@@ -32,5 +32,3 @@ if __name__ == "__main__":
         except KeyboardInterrupt:
             print_metrics(total_size, status_counts)
             raise
-    if __name__ == "__main__":
-        main()
