@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" This module hat reads stdin line by line and computes metrics """
 import sys
 
 def print_metrics(total_size, status_counts):
