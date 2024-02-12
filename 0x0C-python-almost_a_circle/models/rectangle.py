@@ -1,16 +1,19 @@
 #!/usr/bin/python3
 """This module defines the class Rectangle that inherits from Base"""
 from models.base import Base
+
+
 class Rectangle(Base):
     """ This class represent Rectangle that inherits from Base"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """ This class constructor """
         super().__init__(id)
-        self.width=width
-        self.height=height
-        self.x=x
-        self.y=y
-        
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+
     @property
     def width(self):
         return self.__width
@@ -18,7 +21,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
-            raise TypeError("width must be an integer") 
+            raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
@@ -50,6 +53,7 @@ class Rectangle(Base):
     @property
     def y(self):
         return self.__y
+
     @y.setter
     def y(self, value):
         if not isinstance(value, int):
@@ -59,15 +63,21 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """ This module of area"""
         return self.width * self.height
 
     def display(self):
+        """ This module of display """
         for _ in range(self.y):
             print()
         for _ in range(self.height):
             print(" " * self.x + "#" * self.width)
+
     def __str__(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        """ This module of string """
+        return "[Rectangle] ({}) {}/{} - {}/{}".//
+        format(self.id, self.x, self.y, self.width, self.height)
+
     def update(self, *args, **kwargs):
         """Update the Rectangle attributes"""
         if args:
@@ -77,6 +87,8 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
     def to_dictionary(self):
         """Return the dictionary representation of the Rectangle"""
-        return {"id": self.id, "width": self.width, "height": self.height, "x": self.x, "y": self.y}
+        return {"id": self.id, "width": self.width//,
+                "height": self.height, "x": self.x, "y": self.y}
