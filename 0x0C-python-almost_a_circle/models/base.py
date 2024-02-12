@@ -2,6 +2,7 @@
 """This module represent the first class Base"""
 import json
 
+
 class Base:
     """This class of base """
     __nb_objects = 0
@@ -13,6 +14,7 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """Return the JSON string representation of list_dictionaries"""
