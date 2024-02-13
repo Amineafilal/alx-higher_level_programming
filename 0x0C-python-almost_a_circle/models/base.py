@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """This module represent the first class Base"""
 import json
-import csv
-
 
 class Base:
     """This class of base """
@@ -63,33 +61,3 @@ class Base:
         except FileNotFoundError:
             return []
 
-    @classmethod
-    def save_to_file_csv(cls, list_objs):
-        """This module save a file CSV """
-        filename = cls.__name__ + ".csv"
-        with open(filename, mode='w', newline='') as file:
-            writer = csv.writer(file)
-            if cls.__name__ == "Rectangle":
-                for obj in list_objs:
-                    writer.writerow([obj.id, obj.width,
-                                     obj.height, obj.x, obj.y])
-                elif cls.__name__ == "Square":
-                    for obj in list_objs:
-                        writer.writerow([obj.id, obj.size, obj.x, obj.y])
-
-    @classmethod
-    def load_from_file_csv(cls):
-        """This module load file CSV """
-        filename = cls.__name__ + ".csv"
-        objs = []
-        with open(filename, mode='r') as file:
-            reader = csv.reader(file)
-            for row in reader:
-                if cls.__name__ == "Rectangle":
-                    obj = Rectangle(int(row[1]), int(row[2]),
-                                    int(row[3]), int(row[4]), int(row[0]))
-                elif cls.__name__ == "Square":
-                    obj = Square(int(row[1]), int(row[2]),
-                                 int(row[3]), int(row[0]))
-                objs.append(obj)
-        return objs
