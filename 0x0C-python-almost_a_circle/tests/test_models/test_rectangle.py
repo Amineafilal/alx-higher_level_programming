@@ -365,3 +365,16 @@ class TestRectangleMethods(unittest.TestCase):
 
         for i in range(len(linput)):
             self.assertEqual(linput[i].__str__(), loutput[i].__str__())
+    def test_save_to_file(self):
+        """ Test save JSON file """
+        r1 = Rectangle(5, 5)
+        r2 = Rectangle(8, 2, 5, 5)
+
+        rectangles = [r1, r2]
+        filename = "test_rectangles.json"
+
+        Rectangle.save_to_file(rectangles, filename)
+
+        with open(filename, "r") as file:
+            data = json.load(file)
+
